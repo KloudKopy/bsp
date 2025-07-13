@@ -46,11 +46,11 @@ bsp_makedeb() {
             local URL="https://github.com/radxa-pkg/linux-image-$FORK"
             local DESCRIPTION=${DESCRIPTIONS[$i]}
             local DEPEND=("--depends" "${DEPENDS[$i]}")
-            if (( i == 0 ))
-            then
-                # Linux image also requires the overlay package
-                DEPEND+=("--depends" "radxa-overlays-dkms")
-            fi
+            #if (( i == 0 ))
+            #then
+            #    # Linux image also requires the overlay package
+            #    DEPEND+=("--depends" "radxa-overlays-dkms")
+            #fi
             local PROVIDE=()
             if [[ -n "${PROVIDES[$i]}" ]]
             then
